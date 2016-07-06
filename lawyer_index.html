@@ -53,16 +53,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <div class="m-hi">
-          <h1>小纽问答</h1>
-          <p>每天都有成千上万在美国打拼、漂泊、生活的小伙伴们 <br>在使用小纽值得信赖的法律咨询平台</p>
+        <div class="m-hi" style="padding-top: 260px;">
+          <h1>找个律师吧</h1>
+          <br>
+          <br>
         </div>
-        <form action="http://ask.nyis.com/search" class="form-inline" method="get">
+        <form action="http://ddd.nyis.com/search" class="form-inline" method="get">
+          <input type="text" name="param1" style="display: none" class="input-for-datalist" value="name">
           <div style="text-align: center">
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-btn">
-                  <button type="button" class="btn btn-default dropdown-toggle input-lg btn-choice" data-toggle="dropdown"
+                  <button type="button" class="btn btn-default dropdown-toggle input-lg btn-choice"
+                          data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="false">
                     <span class="choices">律师姓名</span> <span class="caret"></span>
                   </button>
@@ -71,13 +74,11 @@
                     <li><a href="#">从业领域</a></li>
                   </ul>
                 </div>
-                <input type="text" class="form-control input-lg search-input-choice"
-                       placeholder="律师姓名">
+                <input type="text" class="form-control input-lg search-input-choice" name="param2" placeholder="律师姓名" autocomplete="off">
               </div>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control input-lg"
-                     placeholder="所在州">
+              <input type="text" class="form-control input-lg" name="param3" placeholder="所在州" autocomplete="off">
             </div>
             <div class="form-group">
               <button type="submit" id="btn-slide1" class="btn btn-info1 btn-lg">搜索</button>
@@ -89,14 +90,99 @@
   </div>
 </header>
 
-<div class="container">
-  <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="#">Profile</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-  </ul>
+<div class="icon-container text-center">
   <div class="container">
-    <h1>置顶律师</h1>
+    <div class="row">
+      <div class="col-md-4 single-icon-container">
+        <img src="./images/lawyer-icon-1.png">
+        <h5><strong>律师覆盖全美</strong></h5>
+      </div>
+      <div class="col-md-4 single-icon-container">
+        <img src="./images/lawyer-icon-2.png">
+        <h5><strong>信息完整准确</strong></h5>
+      </div>
+      <div class="col-md-4 single-icon-container">
+        <img src="./images/lawyer-icon-3.png">
+        <h5><strong>用户真实体验</strong></h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center content-container">
+  <div class="row">
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class="thumbnail-1st" style="background-image: url('./images/categori/business.jpg')">
+          <h1 class="middle-caption high-contrast">商业</h1>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class="thumbnail-1st" style="background-image: url('./images/categori/family.jpg')">
+          <h1 class="middle-caption high-contrast">家庭</h1>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class="thumbnail-1st" style="background-image: url('./images/categori/immigration.jpg')">
+          <h1 class="middle-caption high-contrast">移民</h1>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class=" thumbnail-2nd" style="background-image: url('./images/categori/criminal.jpg')">
+          <h1 class="middle-caption high-contrast">刑事</h1>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class=" thumbnail-2nd" style="background-image: url('images/categori/transportation-1.jpg')">
+          <h1 class="middle-caption high-contrast">交通</h1>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class=" thumbnail-2nd" style="background-image: url('./images/categori/labor.jpg')">
+          <h1 class="middle-caption high-contrast">劳工</h1>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class=" thumbnail-2nd" style="background-image: url('./images/categori/landlord.jpg')">
+          <h1 class="middle-caption high-contrast">地产</h1>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class=" thumbnail-2nd" style="background-image: url('./images/categori/rent.jpg')">
+          <h1 class="middle-caption high-contrast">租赁</h1>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-4 thumbnail-container">
+      <a href="#">
+        <div class=" thumbnail-2nd" style="background-image: url('./images/categori/bankruptcy.jpg')">
+          <h1 class="middle-caption high-contrast">破产</h1>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-5">
+      <a href="#" class="btn btn-default btn-block"><h4>更多领域</h4></a>
+    </div>
   </div>
 </div>
 
@@ -151,12 +237,19 @@
 </div>
 
 <script>
-$(document).ready(function(){
-  $('.search-choices li a').click(function () {
-    $(".btn-choice .choices").text($(this).text());
-    $(".search-input-choice").attr("placeholder", $(this).text());
+  $(document).ready(function () {
+    $(".input-for-datalist").val("name");
+    $('.search-choices li a').click(function () {
+      $(".btn-choice .choices").text($(this).text());
+      $(".search-input-choice").attr("placeholder", $(this).text());
+      if ($(this).text() == "律师姓名") {
+        $(".input-for-datalist").val('name');
+      }
+      else {
+        $(".input-for-datalist").val('practice_area');
+      }
+    });
   });
-});
 </script>
 
 </body>
