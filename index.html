@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>index</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var $animation_elements = $('.animation-element');
+      var $window = $(window);
+
+      function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($animation_elements, function () {
+          var $element = $(this);
+          var element_height = $element.outerHeight();
+          var element_top_position = $element.offset().top;
+          var element_bottom_position = (element_top_position + element_height);
+
+          //check to see if this current container is within viewport
+          if ((element_bottom_position >= window_top_position) &&
+              (element_top_position <= window_bottom_position)) {
+            $element.addClass('in-view');
+          } else {
+            $element.removeClass('in-view');
+          }
+        });
+      }
+
+      $window.on('scroll resize', check_if_in_view);
+      $window.trigger('scroll');
+    });
+  </script>
+
+</head>
+<body>
+<nav class="navbar navbar-a navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.nyis.com/"><img src="images/logo.png" alt=""></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="https://www.nyis.com/">服务商城</a></li>
+          <li><a href="https://nyislawfirm.com/">小纽问答</a></li>
+          <li><a href="http://ask.nyis.com/">律师大全</a></li>
+        </ul>
+        <a href="http://ask.nyis.com/login?to=" class="btn navbar-btn btn-info">客户登录</a>
+        <a href="http://ask.nyis.com/register?to=" class="btn navbar-btn btn-a1">注册</a>
+        <!--<div class="tel"><span>客服咨询热线</span> <br> 1-800-685-NYIS(6947)</div>-->
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- banner -->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <!-- 1st slide -->
+    <div class="item active">
+      <div id="banner1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="m-hi">
+                <h1>小纽问答</h1>
+                <p>每天都有成千上万在美国打拼、漂泊、生活的小伙伴们 <br>在使用小纽值得信赖的法律咨询平台</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2nd slide -->
+    <div class="item">
+      <div id="banner2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="m-hi">
+                <h1>NYIS Legal Online</h1>
+                <p>H-1B在线申请帮您轻松搞定</p>
+              </div>
+              <!--<div class="m-so2">
+                <a href="https://nyislawfirm.com/" class="btn slide2-btn btn-slide2">立即申请</a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3rd slide -->
+    <div class="item">
+      <div id="banner3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="m-hi">
+                <h1>新闻原创</h1>
+                <p>每天发布海量干货文章</p>
+              </div>
+              <!--<div class="m-so2">
+                <a href="http://ask.nyis.com/allnews" class="btn slide2-btn btn-slide2">浏览文章</a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-search-form">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form action="http://ask.nyis.com/search" class="form-inline" method="get">
+          <div class="m-so1">
+            <input id="question-input" type="text" class="form-control inp input-lg"
+                   placeholder="专业服务">
+            <button type="submit" id="btn-slide1" class="btn btn-info btn-lg">搜索</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<!-- banenr end -->
+
+<!-- 首页图标 -->
+<div class="bg-fff">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="i-icobox">
+          <a href="http://ask.nyis.com/"><em class="i-ico i-ico1"> </em></a>
+
+          <h3>服务商城</h3>
+          <p>专业服务互联网化，轻松简便</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="i-icobox">
+          <a href="https://nyislawfirm.com/"><em class="i-ico i-ico2"></em></a>
+          <h3>小纽问答</h3>
+          <p>有问必答，有求必应</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="i-icobox">
+          <a href="#"><em class="i-ico i-ico3"></em></a>
+          <h3>律师大全</h3>
+          <p>最权威的律师评价系统</p>
+        </div>
+      </div>
+      <!--<div class="col-md-4 col-sm-6">
+        <div class="i-icobox">
+          <a href="http://ask.nyis.com/allnews"><em class="i-ico i-ico4"></em></a>
+          <h3>新闻原创</h3>
+          <p>每天发布海量干货文章</p>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>
+
+<div id="seperator"></div>
+<div class="down"></div>
+
+<!-- 首页图标 end-->
+
+<div class="legal-online">
+  <div class="g-maintit" id="legal-online-tit">
+    <h2>NYIS Legal Online</h2>
+    <p>如果您想申请，请在NYIS线上申请，帮你轻松搞定</p>
+  </div>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="i-msg">
+          <div class="animation-element slide-left">
+            <div class="subject">
+              <em class="i-msg-img i-msg1"></em>
+            </div>
+          </div>
+          <h3>免费在线评估</h3>
+          <p>为了更好地为您提供移民服务，让我们进一步了解您的背景以全面地评估您的移民申请</p>
+          <p>
+            <a href="https://nyislawfirm.com/?page_id=18200" class="btn btn-blue">马上开始</a>
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="i-msg">
+          <div class="animation-element slide-left">
+            <div class="subject">
+              <em class="i-msg-img i-msg2"></em>
+            </div>
+          </div>
+          <h3>H-1B申请及Transfer</h3>
+          <p>在线的H-1B工作签证<br>及Transfer服务</p>
+          <p>
+            <a href="https://nyislawfirm.com/?page_id=431" class="btn btn-blue">马上开始</a>
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="i-msg">
+          <div class="animation-element slide-left">
+            <div class="subject">
+              <em class="i-msg-img i-msg3"></em>
+            </div>
+          </div>
+          <h3>在线签约</h3>
+          <p>在线与律师签署服务合约</p>
+          <p>
+            <a href="https://nyislawfirm.com/?page_id=19332" class="btn btn-blue">马上开始</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 需求发布 -->
+<!--<div class="bg-blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="g-maintit g-maintit2">
+          <h2>需求发布</h2>
+          <p>有需求来这里帮你解决</p>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <form action="#" class="form-inline" method="q">
+          <div class="m-so-x">
+            <input id="need-input" type="text" class="form-control inp input-lg" placeholder="寻找律师帮您处理案件">
+            <button type="submit" class="btn btn-a2 btn-lg">发布</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!-- 需求发布 end -->
+
+<!-- 新闻原创 -->
+<div class="news">
+  <div class="g-maintit" id="news-title">
+    <h2>新闻原创</h2>
+    <p>每天最新的实时原创新闻，海量干货文章满足你</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-txt">
+          <li>
+            <a href="http://ask.nyis.com/12790/"><span class="date">
+            <em>01/14</em>
+        </span> </a>
+            <h4><a href="http://ask.nyis.com/12790/">彩票没中？恭喜你，你才是人生赢家！</a></h4>
+            <p>什么？你没中奖？现在庆幸还好昨晚下班前辞职信没递出去了吧？</p>
+          </li>
+          <li>
+            <a href="http://ask.nyis.com/12789"><span class="date">
+            <em>01/13</em>
+        </span> </a>
+            <h4><a href="http://ask.nyis.com/12789">奥巴马讲话你打盹儿，你咋不上天呢？</a></h4>
+            <p>领导夹菜你转桌，领导讲话你唠嗑。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-txt">
+          <li>
+            <a href="http://ask.nyis.com/12788"><span class="date">
+            <em>01/12</em>
+        </span> </a>
+            <h4><a href="http://ask.nyis.com/12788">【官方公示】移民局公布H-1B申请费上调执行细则！</a></h4>
+            <p>今天美国移民局在官网发文，H-1B、L-1工作签证申请费上调。</p>
+          </li>
+          <li>
+            <a href="http://ask.nyis.com/12670"><span class="date">
+            <em>01/11</em>
+        </span> </a>
+            <h4><a href="http://ask.nyis.com/12670">如何在宇宙中心选个窝 | 公寓楼 大House你爱哪个？</a></h4>
+            <p>在纽约，你永远在找男友、工作和房子。</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="i-more text-center">
+      <a href="http://ask.nyis.com/allnews" class="btn btn-load">更多原创新闻</a>
+    </p>
+  </div>
+</div>
+<!-- 新闻原创 end -->
+
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="contact">
+
+
+          <div class="tel">
+            <div class="footer-icon footer-icon1">
+              <img src="images/footer-icon1.png" height="45" width="45">
+            </div>
+            <p>客服咨询热线</p>
+            <p class="phone">1-800-685-NYIS(6947)</p>
+          </div>
+
+          <div class="ask">
+            <div class="footer-icon footer-icon2">
+              <img src="images/footer-icon2.png" height="45" width="45">
+            </div>
+            <p>邮箱</p>
+            <p class="website"><a href="mailto:info@nyis.com">info@nyis.com</a></p>
+          </div>
+
+          <div class="weibo">
+            <div class="footer-icon footer-icon3">
+              <img src="images/footer-icon3.png" height="45" width="45">
+            </div>
+            <p>微博</p>
+            <p class="account"><a href="weibo.com/newyorkis">@小纽美国法律咨询</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-2 text-right i-eq">
+        <span><img src="images/eq1.png" height="130" width="130" alt=""><em>客服平台<br>asknyis</em></span>
+      </div>
+      <div class="col-md-2 text-right i-eq">
+        <span><img src="images/eq2.png" height="130" width="130" alt=""><em>公众平台<br>newyork_is</em></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 legal">
+        <p class="copy">© Copyright 2015 NYIS ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<!-- 右侧浮动 -->
+<!-- 暂时不要
+<div id="fixbtn">
+    <a href="" class="i1"></a>
+    <a href=""class="i2"></a>
+</div>
+
+<p>工作日 10:00 - 19:00</p>
+<p><a href="" class="btn btn-o btn-sm">在线客服</a></p>
+-->
