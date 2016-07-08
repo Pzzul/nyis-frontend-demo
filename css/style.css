@@ -116,7 +116,7 @@ h3{
 }
 
 /* 通用模块 -------------------------------------------------- */
-.g-maintit {text-align: center; margin: 0px 10px 50px 10px;}
+.g-maintit {text-align: center; margin: 0 10px 50px 10px;}
 .g-maintit h2 {margin:0 5px 20px 5px;}
 .g-maintit p {}
 .g-maintit2,.g-maintit2 h2,.g-maintit2 p{margin: 0; padding: 0; color: #fff;}
@@ -163,7 +163,7 @@ h3{
 .i-eq span{ display: inline-block; width: 130px; height: 130px; background: none;  text-align: center; border-radius: 7px; margin-bottom: 10px; padding:0;}
 .i-eq span em {font-style: normal; font-size: 14px; color: #fff; margin-top: 5px;}
 .legal {text-align: center; margin-top:40px;}
-.legal p {padding:0; margin-top: 0px;}
+.legal p {padding:0; margin-top: 0;}
 .navs,.navs li {padding: 0; margin: 0; list-style:none;}
 .navs li {font-size: 14px; margin-bottom: 10px;}
 #footer .tel p, #footer .ask p, #footer .weibo p {padding-top: 0; margin-bottom: 5px;}
@@ -307,8 +307,8 @@ background-color: #3d5a98;
   content: '';
   display: block;
   margin: 0 auto;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #fff;
@@ -533,7 +533,107 @@ background-size: cover;
 }
 
 #banner4{
-    background: url(../images/banner1.jpg) no-repeat center top; height: 700px;
+    background: url(../images/banner4.jpg) no-repeat center top; height: 700px;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+/* style sheet for lawyer search result */
+.search-head{
+    padding-bottom: 10px;
+}
+
+.search-caption{
+    height: 200px;
+    background-position-y: 25%;
+}
+
+.search-caption .container{
+    padding-top: 50px;
+}
+
+.rc-info-collection{
+    padding: 30px 0 30px 0;
+    background-color: lightgray;
+}
+
+.rc-info-collection .col-md-4{
+    padding: 0 30px 0 30px;
+}
+
+.rc-info-container{
+    position: relative;
+    height: 280px;
+    padding: 10px 0 10px 0;
+    background-color: white;
+}
+
+.rc-info-text{
+    width:300px;
+    margin: auto;
+}
+
+.rc-info-text img{
+    width:33%;
+}
+
+.rc-badge{
+    height: 30px;
+    position: absolute;
+    top: 10px;
+}
+
+.rc-badge img{
+    height: 100%;
+}
+
+.fa-star{
+    color: yellow;
+}
+.practice-area-collection{
+    margin: 0 40px 0 40px;
+}
+
+.practice-area-collection ul{
+    padding: 0;
+}
+
+.search-result-list ul{
+    list-style: none;
+}
+
+.search-list-block{
+    display: block;
+    border-bottom: 1px solid lightgray;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.search-result-list  h4{
+    margin-bottom: 0;
+}
+.search-result-portrait img{
+    width: 100%;
+}
+
+.practice-area-collection ul li{
+    display: inline-block;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 0 3px 0 3px;
+}
+
+.search-result-list .practice-area-collection{
+    margin: 0;
+}
+
+.search-list-block .btn{
+    margin-top: 20px;
+    border-radius: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+    color: #3d5a98;
+    border-color: #3d5a98;
+}
+.search-list-block .col-md-4{
+    color: #3d5a98;
 }
