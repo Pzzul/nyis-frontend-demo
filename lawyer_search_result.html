@@ -13,9 +13,6 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
 </head>
 <body>
 <nav class="navbar navbar-a navbar-static-top">
@@ -41,7 +38,7 @@
           <li><a href="http://ask.nyis.com/">律师大全</a></li>
         </ul>
         <a href="http://ask.nyis.com/login?to=" class="btn navbar-btn btn-info">登录</a>
-        <a href="http://ask.nyis.com/register?to=" class="btn navbar-btn btn-a1">注册</a>
+        <!--<a href="http://ask.nyis.com/register?to=" class="btn navbar-btn btn-a1">注册</a>-->
         <!--<div class="tel"><span>客服咨询热线</span> <br> 1-800-685-NYIS(6947)</div>-->
       </div>
     </div><!-- /.navbar-collapse -->
@@ -69,8 +66,8 @@
                  autocomplete="off">
         </div>
       </div>
-      <div class="form-group">
-        <input type="text" class="form-control input-lg" name="param3" placeholder="所在州" autocomplete="off">
+      <div class="form-group" id="the-basics">
+        <input type="text" class="form-control input-lg typeahead" name="param3" placeholder="所在州" autocomplete="off">
       </div>
       <div class="form-group">
         <button type="submit" id="btn-slide1" class="btn btn-info1 btn-lg">搜索</button>
@@ -418,20 +415,9 @@
   </div>
 </div>
 
-<script>
-  $(document).ready(function () {
-    $(".input-for-datalist").val("name");
-    $('.search-choices li a').click(function () {
-      $(".btn-choice .choices").text($(this).text());
-      $(".search-input-choice").attr("placeholder", $(this).text());
-      if ($(this).text() == "律师姓名") {
-        $(".input-for-datalist").val('name');
-      }
-      else {
-        $(".input-for-datalist").val('practice_area');
-      }
-    });
-  });
-</script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/typeahead.jquery.min.js"></script>
+<script type="text/javascript" src="js/search-form.js"></script>
 </body>
 </html>
