@@ -568,6 +568,12 @@ background-size: cover;
     background-color: white;
 }
 
+@media (max-width: 991px) {
+    .rc-info-container{
+        margin-bottom: 5px;
+    }
+}
+
 .rc-info-text{
     width:300px;
     margin: auto;
