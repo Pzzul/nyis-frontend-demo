@@ -5,6 +5,7 @@
   <title>lawyer profile</title>
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/jquery.rateyo.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
@@ -33,7 +34,8 @@
           <li><a href="https://nyislawfirm.com/">小纽问答</a></li>
           <li><a href="http://ask.nyis.com/">律师大全</a></li>
         </ul>
-        <a href="http://ask.nyis.com/login?to=" class="btn navbar-btn btn-info">登录</a>
+        <a href="http://ask.nyis.com/login?to=" class="btn navbar-btn btn-info" data-toggle="modal"
+           data-target="#myModal">登录</a>
         <!--<a href="http://ask.nyis.com/register?to=" class="btn navbar-btn btn-a1">注册</a>-->
         <!--<div class="tel"><span>客服咨询热线</span> <br> 1-800-685-NYIS(6947)</div>-->
       </div>
@@ -143,18 +145,18 @@
       <p style="display: inline-block">156</p>
     </div>
     <br>
-    <a href="#" class="btn btn-default btn-customized" data-toggle="modal" data-target="#myModal">写点评</a>
+    <a href="#" class="btn btn-default btn-customized" data-toggle="modal" data-target="#myModal1">写点评</a>
     <br>
     <ul class="review-list">
       <li class="col-md-10 col-md-offset-1">
         <div>
           <div class="col-md-4" style="text-align: left">
             <div>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
             </div>
             <h4>由 <span>小丸子</span></h4>
             <h4>发布于 <span>07-21-2015</span></h4>
@@ -178,7 +180,8 @@
             <h4>发布于 <span>06-11-2015</span></h4>
           </div>
           <div class="col-md-8" style="text-align: left">
-            <h4>我我和我的家人已经与他们一起工作了很长的时间和签证绿卡（永久居留）取得了进展 - 全部在所允许的过程中最短的周转时间。更重要的是，<span>Chang</span>是专家，知道他们需要每一个人的情况该怎么做。在我们的例子中，我们从来没有任何进一步的挫折或查询与已提交的任何申报。他们始终可用的网站，回答任何问题，并就任何疑问或客户可能有所顾虑咨询。</h4>
+            <h4>我我和我的家人已经与他们一起工作了很长的时间和签证绿卡（永久居留）取得了进展 - 全部在所允许的过程中最短的周转时间。更重要的是，<span>Chang</span>是专家，知道他们需要每一个人的情况该怎么做。在我们的例子中，我们从来没有任何进一步的挫折或查询与已提交的任何申报。他们始终可用的网站，回答任何问题，并就任何疑问或客户可能有所顾虑咨询。
+            </h4>
           </div>
         </div>
       </li>
@@ -196,7 +199,8 @@
             <h4>发布于 <span>02-17-2015</span></h4>
           </div>
           <div class="col-md-8" style="text-align: left">
-            <h4><span>Chang</span>律师正在帮我们的转换H1状态。我们的情况下，有一个非常窄的时间框架，因为我们以前的状态到期。幸运的是<span>Chang</span>律师正确处理我们的情况，所以我们提前得到了批准。令人惊喜的服务水平和质量，并且让我们实时更新非常感激，那是很短的时间，我们真的很辛运找到他！谢谢</h4>
+            <h4><span>Chang</span>律师正在帮我们的转换H1状态。我们的情况下，有一个非常窄的时间框架，因为我们以前的状态到期。幸运的是<span>Chang</span>律师正确处理我们的情况，所以我们提前得到了批准。令人惊喜的服务水平和质量，并且让我们实时更新非常感激，那是很短的时间，我们真的很辛运找到他！谢谢
+            </h4>
           </div>
         </div>
       </li>
@@ -209,11 +213,11 @@
       <h3>执照信息</h3>
       <table>
         <tr>
-            <th>适用州</th>
-            <th>状态</th>
-            <th>获得日期</th>
-            <th>最近更新</th>
-          </tr>
+          <th>适用州</th>
+          <th>状态</th>
+          <th>获得日期</th>
+          <th>最近更新</th>
+        </tr>
         <tr>
           <td>IL</td>
           <td>Active And Authorized To Practice Law</td>
@@ -253,6 +257,7 @@
       </table>
     </div>
   </div>
+
 </div>
 <div id="footer">
   <div class="container">
@@ -261,24 +266,34 @@
         <div class="contact">
           <div class="ask">
             <div class="footer-icon footer-icon1">
-              <img src="https://lh3.googleusercontent.com/-BX5eXAqWCfo/VvBwCJ8vjUI/AAAAAAAACeI/YeRvG7aUZxUrqndskdI06caTz6Eo2ExJwCCo/s188-Ic42/footer-icon1.png" height="45" width="45">
+              <img
+                  src="https://lh3.googleusercontent.com/-BX5eXAqWCfo/VvBwCJ8vjUI/AAAAAAAACeI/YeRvG7aUZxUrqndskdI06caTz6Eo2ExJwCCo/s188-Ic42/footer-icon1.png"
+                  height="45" width="45">
             </div>
             <p>客服咨询热线</p>
             <p class="phone">1-800-685-NYIS(6947)</p>
           </div>
           <div class="ask">
             <div class="footer-icon footer-icon2">
-              <img src="https://lh3.googleusercontent.com/-QzxiSRcf8Bk/VvBwE09TQYI/AAAAAAAACeA/HPanHRVbsQICj3pY5ltaJ0d0oy42CQ5uACCo/s188-Ic42/footer-icon2.png" height="45" width="45">
+              <img
+                  src="https://lh3.googleusercontent.com/-QzxiSRcf8Bk/VvBwE09TQYI/AAAAAAAACeA/HPanHRVbsQICj3pY5ltaJ0d0oy42CQ5uACCo/s188-Ic42/footer-icon2.png"
+                  height="45" width="45">
             </div>
             <p>邮箱</p>
             <p class="website"><a href="mailto:info@nyis.com">info@nyis.com</a></p>
           </div>
           <div class="weibo">
-            <a href="http://weibo.com/newyorkis"><img src="https://lh3.googleusercontent.com/-MV0oJ2wAxNE/VvBwHIBJzoI/AAAAAAAACeE/G4jnUANXLVMcTAYtfI0J-CV6aCT-KLubQCCo/s188-Ic42/footer-icon3.png" height="45" width="45"></a>
+            <a href="http://weibo.com/newyorkis"><img
+                src="https://lh3.googleusercontent.com/-MV0oJ2wAxNE/VvBwHIBJzoI/AAAAAAAACeE/G4jnUANXLVMcTAYtfI0J-CV6aCT-KLubQCCo/s188-Ic42/footer-icon3.png"
+                height="45" width="45"></a>
 
-            <a href="https://www.facebook.com/asknyis"> <img src="https://lh3.googleusercontent.com/-gmpYY4_B-VA/V0jDnUAHxVI/AAAAAAAADI8/5YMQoSRZWb4GvSiCwrBwSD_BkcZA1RbnwCCo/s188/face-01.png" height="45" width="45" padding-left="5" padding-right="5"></a>
+            <a href="https://www.facebook.com/asknyis"> <img
+                src="https://lh3.googleusercontent.com/-gmpYY4_B-VA/V0jDnUAHxVI/AAAAAAAADI8/5YMQoSRZWb4GvSiCwrBwSD_BkcZA1RbnwCCo/s188/face-01.png"
+                height="45" width="45" padding-left="5" padding-right="5"></a>
 
-            <a href="https://twitter.com/ask_nyis">  <img src="https://lh3.googleusercontent.com/-iidUpEF9KJM/V0jDnyZ_KaI/AAAAAAAADJA/FwYqbtAWYakCk_0Uk5KHKApy-4D1nMU1gCCo/s188/twitter-01.png" height="45" width="45"></a>
+            <a href="https://twitter.com/ask_nyis"> <img
+                src="https://lh3.googleusercontent.com/-iidUpEF9KJM/V0jDnyZ_KaI/AAAAAAAADJA/FwYqbtAWYakCk_0Uk5KHKApy-4D1nMU1gCCo/s188/twitter-01.png"
+                height="45" width="45"></a>
 
           </div>
         </div>
@@ -327,9 +342,116 @@
   </div>
 </div>
 
+<!-- review modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--review submit uri, use post method-->
+      <form action="#" method="post">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <!--律师名字-->
+          <h4 class="modal-title" id="myModalLabel">评价<span>Christie Chang</span></h4>
+          <br>
+          <div id="rateYo"></div>
+        </div>
+        <div class="modal-body">
+          <textarea class="form-control comment-box" name="review">
+        </textarea>
+          <input type="text" id="rating_score" name="rating_score" style="display: none"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-primary">发布评价</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- login modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">登陆 | 注册</h4>
+      </div>
+      <div class="modal-container">
+        <div class="row">
+          <div class="col-xs-6 login-form">
+            <h3>用户登录</h3>
+            <br>
+            <form action="" class="form-horizontal">
+              <div class="input-group">
+                <span class="input-group-addon modal-input-group-addon"><i class="fa fa-envelope-o"></i> </span>
+                <input type="text" class="form-control modal-input" placeholder="用户名" aria-describedby="basic-addon1">
+              </div>
+              <br>
+              <div class="input-group">
+                <span class="input-group-addon modal-input-group-addon"><i class="fa fa-key"></i> </span>
+                <input type="text" class="form-control modal-input" placeholder="密码" aria-describedby="basic-addon1">
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="col-xs-8">
+                  <input type="checkbox">记住我
+                  <p>忘记密码</p>
+                </div>
+                <div class="col-xs-4">
+                  <button type="submit" class="btn btn-primary" style="float:right">登录</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-xs-6 sign-up-form">
+            <h3 class="high-contrast">还不是会员?</h3>
+            <form action="" class="form-horizontal">
+
+              <input type="text" class="form-control modal-input" placeholder="用户名" aria-describedby="basic-addon1">
+
+              <br>
+
+              <input type="text" class="form-control modal-input" placeholder="密码" aria-describedby="basic-addon1">
+
+              <br>
+
+              <input type="text" class="form-control modal-input" placeholder="确认密码" aria-describedby="basic-addon1">
+
+              <br>
+              <div class="row">
+                <button type="submit" class="btn btn-primary" style="float:right;background-color:white">注册</button>
+              </div>
+              <br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/typeahead.jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.rateyo.min.js"></script>
 <script type="text/javascript" src="js/search-form.js"></script>
+<script>
+  $(function () {
+    $("#rateYo").rateYo({
+      starWidth: "16px",
+      halfStar: true,
+      onInit: function(rating){
+        $('#rating_score').val(rating);
+      }
+    }).on('rateyo.change', function (e, data) {
+      $('#rating_score').val(data.rating);
+    });
+  });
+</script>
 </body>
 </html>

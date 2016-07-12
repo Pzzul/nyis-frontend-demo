@@ -740,3 +740,44 @@ th{
     background-color: #4F99C6;
     cursor: pointer
 }
+
+.modal-dialog{
+    margin:200px auto;
+}
+
+.modal-content{
+    border-radius: 0;
+}
+.modal-header{
+    border-bottom: none;
+}
+.modal-footer{
+    width: 200px;
+    margin: auto;
+    border-top: none;
+}
+textarea.comment-box{
+    height: 200px;
+}
+
+.modal-dialog{
+    width: 1024px;
+}
+.modal-container{
+    width: 900px;
+    margin: 10px auto;
+}
+.login-form{
+    padding:0 30px;
+}
+.sign-up-form{
+    padding: 0 30px;
+    background-color: #3d5a98;
+}
+.modal-input-group-addon{
+    background-color: transparent;
+    border-radius: 0;
+}
+.modal-input{
+    border-radius: 0;
+}
